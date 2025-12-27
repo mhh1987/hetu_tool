@@ -1,0 +1,39 @@
+2025-08-13T16:11:45.671+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T16:11:45.671+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55109
+2025-08-13T16:11:45.672+0800	[34mINFO[0m	util/common.go:94	Local IP:192.168.1.83
+2025-08-13T16:12:48.672+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T16:12:48.672+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 54963
+2025-08-13T16:12:48.673+0800	[34mINFO[0m	util/common.go:94	Local IP:192.168.1.83
+2025-08-13T16:17:50.304+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T16:17:50.305+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55041
+2025-08-13T16:18:20.443+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T16:18:20.444+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55254
+2025-08-13T16:18:20.445+0800	[34mINFO[0m	util/common.go:94	Local IP:192.168.1.83
+2025-08-13T16:42:06.763+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T16:42:06.763+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55715
+2025-08-13T16:44:45.353+0800	[34mINFO[0m	util/common.go:94	Local IP:192.168.1.83
+2025-08-13T16:45:12.007+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T16:45:12.008+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55765
+2025-08-13T16:45:12.008+0800	[34mINFO[0m	util/common.go:94	Local IP:192.168.1.83
+2025-08-13T20:37:52.440+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T20:37:52.441+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 54992
+2025-08-13T20:37:52.442+0800	[34mINFO[0m	util/common.go:94	Local IP:192.168.1.83
+2025-08-13T20:38:33.222+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T20:38:33.223+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55498
+2025-08-13T20:38:33.224+0800	[34mINFO[0m	util/common.go:94	Local IP:192.168.1.83
+2025-08-13T20:38:41.980+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T20:38:41.980+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55031
+2025-08-13T20:39:00.536+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T20:39:00.537+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55315
+2025-08-13T20:39:33.940+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T20:39:33.941+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55593
+2025-08-13T20:40:11.211+0800	[34mINFO[0m	util/common.go:94	Local IP:192.168.1.83
+2025-08-13T20:41:59.145+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T20:41:59.146+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55318
+2025-08-13T20:41:59.146+0800	[34mINFO[0m	util/common.go:94	Local IP:192.168.1.83
+2025-08-13T20:43:47.153+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T20:43:47.154+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55029
+2025-08-13T20:43:47.154+0800	[34mINFO[0m	util/common.go:94	Local IP:192.168.1.83
+2025-08-13T22:09:42.058+0800	[34mINFO[0m	clients/client_factory.go:60	logDir:<.sd_data/log>   cacheDir:<.sd_data/cache>
+2025-08-13T22:09:42.059+0800	[34mINFO[0m	naming_client/push_receiver.go:81	udp server start, port: 55562
+2025-08-13T22:09:42.059+0800	[34mINFO[0m	util/common.go:94	Local IP:192.168.1.83
