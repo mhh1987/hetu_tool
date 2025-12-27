@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"code.chenji.com/pkg/common/tool"
+	"github.com/mhh1987/hetu_tool/json_tool"
 )
 
 func TestWriteExcelByteMultiSheet(t *testing.T) {
@@ -190,7 +190,7 @@ func TestScanResultDataRowGroupBySchool(t *testing.T) {
 		//},
 	}
 	resultData := ScanResultDataRowGroupBySchool(rows)
-	t.Log(fmt.Sprintf("resultData:%s", tool.ToJson(resultData)))
+	t.Log(fmt.Sprintf("resultData:%s", json_tool.ToJson(resultData)))
 }
 
 func ScanResultDataRowGroupBySchool(itemList []*ScanResultDataRow) []*ScanResultSheetData {

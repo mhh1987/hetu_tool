@@ -2,17 +2,15 @@ package lists
 
 import (
 	"slices"
-
-	"code.chenji.com/cj/scan_paper/utils/valid"
 )
 
 // DiffList 获取两个数组的差集，sourceList，targetList 差集， 即为sourceList中包含，但是targetList中不包含的。
 func DiffList[T int8 | int16 | int | int32 | int64](sourceList, targetList []T) []T {
 
-	if valid.IsEmptySlice(sourceList) {
+	if len(sourceList) <= 0 {
 		return sourceList
 	}
-	if valid.IsEmptySlice(targetList) {
+	if len(targetList) <= 0 {
 		return sourceList
 	}
 	resultList := make([]T, 0, len(sourceList))
@@ -31,7 +29,7 @@ func DiffList[T int8 | int16 | int | int32 | int64](sourceList, targetList []T) 
 
 // Map 集合元素的映射
 func Map[T any, K any](dataList []T, fc func(item T) K) []K {
-	if valid.IsEmptySlice(dataList) {
+	if len(dataList) <= 0 {
 		return nil
 	}
 	resultList := make([]K, 0, len(dataList))
@@ -104,7 +102,7 @@ func FindFirst[T any](dataList []T, fc func(item T) bool) (T, bool) {
 
 func IsContain[T string | int8 | int16 | int | int32 | int64](source []T, target T) bool {
 
-	if valid.IsEmptySlice(source) {
+	if len(source) <= 0 {
 		return false
 	}
 	for _, s := range source {

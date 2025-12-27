@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"code.chenji.com/cj/scan_paper/excel_tool"
-	"code.chenji.com/cj/scan_paper/utils"
+	"github.com/mhh1987/hetu_tool/excel_tool"
+	"github.com/mhh1987/hetu_tool/time_format"
 	"github.com/pkg/errors"
 	"github.com/xuri/excelize/v2"
 )
@@ -47,7 +47,7 @@ func (t *ScanResultTemplate) getTitleRow() []*ScanResultDataRow {
 
 	titles := make([]*ScanResultDataRow, 0, 2)
 	titles = append(titles, &ScanResultDataRow{
-		No: fmt.Sprintf("%s%s", "数据生成时间:", utils.TimeFormatToStr(time.Now(), utils.TimeFormatHyphen)),
+		No: fmt.Sprintf("%s%s", "数据生成时间:", time_format.TimeFormatToStr(time.Now(), time_format.TimeFormatHyphen)),
 	})
 	titles = append(titles, &ScanResultDataRow{
 		No:          "序号",
@@ -117,11 +117,11 @@ type ScanItemData struct {
 
 func (t *ScanResultTemplate) GetAbsentFileName() string {
 
-	return fmt.Sprintf("%s%s_%s.xlsx", ScanResultFilePath, AbsentFileNamePrefix, utils.TimeFormatToStr(time.Now(), utils.TimeFormatHyphen))
+	return fmt.Sprintf("%s%s_%s.xlsx", ScanResultFilePath, AbsentFileNamePrefix, time_format.TimeFormatToStr(time.Now(), time_format.TimeFormatHyphen))
 }
 
 func (t *ScanResultTemplate) GetMissPaperFileName() string {
-	return fmt.Sprintf("%s%s_%s.xlsx", ScanResultFilePath, MissPaperFileNamePrefix, utils.TimeFormatToStr(time.Now(), utils.TimeFormatHyphen))
+	return fmt.Sprintf("%s%s_%s.xlsx", ScanResultFilePath, MissPaperFileNamePrefix, time_format.TimeFormatToStr(time.Now(), time_format.TimeFormatHyphen))
 }
 
 type SheetCellData struct {
