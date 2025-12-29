@@ -39,3 +39,8 @@ type CropRect struct {
 	Rect     *Rect
 	Sequence int32
 }
+
+type ImageDimension struct {
+	Width  int64
+	Height int64
+}

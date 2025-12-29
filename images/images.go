@@ -313,3 +313,22 @@ func checkRect(rect *Rect) error {
 	}
 	return nil
 }
+
+func GetImageDimension(imageData []byte) *ImageDimension {
+
+	if len(imageData) <= 0 {
+		return nil
+	}
+	// 手动注册JPEG格式
+	image.RegisterFormat("jpeg", "\xff\xd8", jpeg.Decode, jpeg.DecodeConfig)
+	// 手动注册PNG格式
+	image.RegisterFormat("png", "\x89PNG\r\n\x1a\n", png.Decode, png.DecodeConfig)
+	tempImage, _, err := image.Decode(bytes.NewReader(imageData))
+	if err != nil {
+		return nil
+	}
+	return &ImageDimension{
+		Width:  int64(tempImage.Bounds().Dx()),
+		Height: int64(tempImage.Bounds().Dy()),
+	}
+}
