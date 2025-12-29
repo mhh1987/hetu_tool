@@ -34,6 +34,23 @@ func CropImage(key string, rect *Rect) string {
 	return fmt.Sprintf("%s?x-tos-process=image/crop,w_%d,h_%d,x_%d,y_%d", key, rect.W, rect.H, rect.X, rect.Y)
 }
 
+// CropImageWithDimension 切图，key为目标图片的tos key，rect为想要切取的区域
+func CropImageWithDimension(key string, rect *Rect, dimension *ImageDimension) string {
+	if rect == nil {
+		return ""
+	}
+	if dimension != nil { // 处理边界问题
+		rect = DealPositionWithDimension(dimension, rect)
+	}
+	if err := checkRect(rect); err != nil {
+		return ""
+	}
+	if strings.Contains(key, "?") {
+		return fmt.Sprintf("%s/crop,w_%d,h_%d,x_%d,y_%d", key, rect.W, rect.H, rect.X, rect.Y)
+	}
+	return fmt.Sprintf("%s?x-tos-process=image/crop,w_%d,h_%d,x_%d,y_%d", key, rect.W, rect.H, rect.X, rect.Y)
+}
+
 // ScaleImage 缩放图片，rect为想要缩放的区域，scaleVal为外扩的像素值
 func ScaleImage(rect *Rect, scaleVal int64) *Rect {
 	if rect == nil {
@@ -292,6 +309,34 @@ func DealPosition(imageData image.Image, rect *Rect) *Rect {
 	}
 	maxWidth := int64(imageData.Bounds().Max.X)
 	maxHeight := int64(imageData.Bounds().Max.Y)
+	if rect.W+rect.X > maxWidth {
+		rect.W = maxWidth - rect.X
+	}
+	if rect.H+rect.Y > maxHeight {
+		rect.H = maxHeight - rect.Y
+	}
+	if rect.W <= 0 || rect.H <= 0 {
+		return nil
+	}
+	return rect
+}
+
+func DealPositionWithDimension(imageDimensions *ImageDimension, rect *Rect) *Rect {
+
+	if imageDimensions == nil {
+		return rect
+	}
+	if rect == nil {
+		return rect
+	}
+	if rect.X < 0 {
+		rect.X = 0
+	}
+	if rect.Y < 0 {
+		rect.Y = 0
+	}
+	maxWidth := imageDimensions.Width
+	maxHeight := imageDimensions.Height
 	if rect.W+rect.X > maxWidth {
 		rect.W = maxWidth - rect.X
 	}
